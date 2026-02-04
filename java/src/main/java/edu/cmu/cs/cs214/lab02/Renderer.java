@@ -1,18 +1,17 @@
 package edu.cmu.cs.cs214.lab02;
 
-import edu.cmu.cs.cs214.lab02.shapes.*;
+import edu.cmu.cs.cs214.lab02.shapes.Shape;
 
+/** Renderer class that handles drawing shapes and calculating their areas. */
 public class Renderer {
-    private Shape shape; // Rectangle эсвэл Circle эсвэл Square-ийг хадгалах боломжтой
-    
-    Renderer(Shape shape) {
-        this.shape = shape;
-    }
+  private final Shape shape; // Use 'final' since shape doesn't change
 
-    void draw() {
-        double area = shape.getArea(); 
-        // assume implementation
+  public Renderer(Shape shape) { // Add 'public' modifier
+    this.shape = shape;
+  }
 
-        System.out.println("Shape printed\n" + "Its area is " + area);
-    }
+  public void draw() { // Add 'public' modifier
+    double area = shape.getArea();
+    System.out.println("Shape printed\nIts area is " + area);
+  }
 }

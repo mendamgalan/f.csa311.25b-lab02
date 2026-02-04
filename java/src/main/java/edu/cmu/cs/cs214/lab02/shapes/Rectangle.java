@@ -1,15 +1,18 @@
 package edu.cmu.cs.cs214.lab02.shapes;
 
+/**
+ * A rectangle shape with height and width attributes.
+ */
 public class Rectangle implements Shape {
-    private double height; // attribute-уудыг private болгосон
-    private double width;
-    
-    public Rectangle(double height, double width){
-        this.height = height;
-        this.width = width;
-    }
+  private double height; // attribute-уудыг private болгосон
+  private double width;
 
-    public double getArea() {
-        return height * width;
-    }
+  public Rectangle(double height, double width) {
+    this.height = height;
+    this.width = width;
+  }
+
+  public double getArea() {
+    return height * width;
+  }
 }
